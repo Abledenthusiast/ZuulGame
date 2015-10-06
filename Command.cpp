@@ -21,15 +21,16 @@ using namespace std;
  * @version 2011.08.08
  */
 
+/*
+Converted by Aaron Pitman
+Date: 10.5.2015
+*/
 
     
     
     /**
      * Create a command object. First and second word must be supplied, but
      * either one (or both) can be null.
-     * @param firstWord The first word of the command. Null if the command
-     *                  was not recognised.
-     * @param secondWord The second word of the command.
      */
     Command::Command(string firstWord, string secondWord)
     {
@@ -48,8 +49,7 @@ using namespace std;
     }
 
     /**
-     * @return The second word of this command. Returns null if there was no
-     * second word.
+     * @return The second word of this command. 
      */
     string Command::getSecondWord()
     {

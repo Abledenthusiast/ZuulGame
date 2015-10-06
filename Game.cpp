@@ -207,81 +207,70 @@ Game::Game()
     //main trivia routine. takes input to choose which game to play and which answer
     void Game::playTrivia()
     {
-        bool answer = false;
+        
         if(currentRoom->getCurrentRoom()=="sports trivia")
             {
                 //keep the game going if the user inputs the wrong answer
-                while(!answer)
-                {
-
-
+                
                     printTrivia("sports");
-                    if(parser.getAnswer()=="a")
+                    string response = parser.getAnswer();
+                    if(response=="a")
                     {
                         cout << "correct!" << endl;
-                        answer = true;
-                        currentRoom = currentRoom->getExit("back");
-                        cout << "pick your next topic" << endl;
+                        
+                        
+                        
                     }
                     else{
                         cout << "Nope. Sorry" << endl;
                     }
-                }
+                    
+                
             }
               if(currentRoom->getCurrentRoom()=="politics trivia")
             {
-                while(!answer)
-                {
+                
                     printTrivia("politics");
                     if(parser.getAnswer()=="d")
                     {
                         cout << "correct!" << endl;
-                        answer = true;
-                        currentRoom = currentRoom->getExit("back");
-                        cout << "pick your next topic" << endl;
                     }
                     else{
                         cout << "Nope. Sorry" << endl;
                     }
-                }
+                
             }
 
              if(currentRoom->getCurrentRoom()=="literature trivia")
             {
-                while(!answer)
-                {
+               
                     printTrivia("literature");
                     if(parser.getAnswer()=="a")
                     {
                         cout << "correct! ...Probably..." << endl;
-                        answer = true;
-                        currentRoom = currentRoom->getExit("back");
-                        cout << "pick your next topic" << endl;
+
                     }
                     else{
                         cout << "Nope. Sorry" << endl;
                     }
-                }
+                
             }
 
              if(currentRoom->getCurrentRoom()=="video game trivia")
             {
-                while(!answer)
-                {
+                
                     printTrivia("games");
                     if(parser.getAnswer()=="b")
                     {
                         cout << "correct!" << endl;
-                        answer = true;
-                        currentRoom = currentRoom->getExit("back");
-                        cout << "pick your next topic" << endl;
-
                     }
                     else{
                         cout << "Nope. Sorry" << endl;
                     }
-                }
+                
             }
+            cout << "pick your next topic" << endl;
+            currentRoom = currentRoom->getExit("back");
     }
     
 

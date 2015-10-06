@@ -4,7 +4,10 @@ using namespace std;
 
 #ifndef Command_H
 #define Command_H
-
+/*
+Written by Aaron Pitman
+Date: 10.5.2015
+*/
 class Command
 {
 	private:
@@ -14,7 +17,7 @@ class Command
 	public:
 	Command(string firstWord, string secondWord);
     /**
-     * Return the com:mand word (the first word) of this command. If the
+     * Return the command word (the first word) of this command. If the
      * command was not understood, the result is null.
      * @return The command word.
      */
